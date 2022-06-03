@@ -1,0 +1,10 @@
+# Version
+Version: 1.0.0
+
+# Language: en, zh_CN
+Language: en
+
+# Check update on SpigotMC.
+check-update: true
+
+# There is nothing here. Please go to groups.yml to set what you want.

@@ -1,0 +1,19 @@
+Language: en
+Prefix: HolyJoin
+commands:
+  top: '&8&m                                                   '
+  plugin: '                &b&l%prefix% %version%'
+  space-1: '&f'
+  help: '&7/%prefix% help &6View help.'
+  reload: '&7/%prefix% reload &6Reload the config.'
+  space-2: '&f'
+  bottom: '&8&m                                                   '
+
+reload-success: '&7[&b%prefix%&7] &aConfiguration reloaded!'
+
+no-perm: '&7[&b%prefix%&7] &cYou do not have perms!'
+
+update-check:
+  invalid: 'Unable to check for updates: '
+  latest: 'There is not a new update available.'
+  outdate: 'There is a new update available.'

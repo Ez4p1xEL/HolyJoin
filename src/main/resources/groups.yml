@@ -1,0 +1,23 @@
+group1:
+  join:
+    default: false
+    message:
+      - '&7&m                           '
+      - '&aPro player &e%player% &ajoined the server!'
+      - '&7&m                           '
+  quit:
+    default: false
+    message:
+      - '&7&m                           '
+      - '&aPro player &e%player% &aleft the server!'
+      - '&7&m                           '
+  action:
+    1:
+      type: command
+      command: 'minecraft:give %player% diamond 1'
+    2:
+      type: message
+      message: '&aWelcome back! Your name is %player_name%'
+    3:
+      type: sound
+      sound: FIREWORK_LAUNCH

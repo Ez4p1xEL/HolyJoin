@@ -1,0 +1,7 @@
+name: HolyJoin
+main: p1xel.holyjoin.HolyJoin
+version: 1.0.0
+api-version: 1.13
+commands:
+  holyjoin:
+    aliases: [hj]
