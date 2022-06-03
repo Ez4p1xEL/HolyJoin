@@ -4,6 +4,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import p1xel.holyjoin.Command.Cmd;
 import p1xel.holyjoin.Listeners.JoinCheck;
 import p1xel.holyjoin.Listeners.QuitCheck;
+import p1xel.holyjoin.SpigotMC.UpdateChecker;
+import p1xel.holyjoin.Storage.Config;
 import p1xel.holyjoin.Storage.GroupSettings;
 import p1xel.holyjoin.Storage.Locale;
 import p1xel.holyjoin.bStats.Metrics;
@@ -29,6 +31,16 @@ public class HolyJoin extends JavaPlugin {
         int pluginId = 15372;
         new Metrics(this, pluginId);
         //
+
+        if (Config.getBool("check-update")) {
+            new UpdateChecker(this, 102262).getVersion(version -> {
+                if (this.getDescription().getVersion().equals(version)) {
+                    getLogger().info(Locale.getMessage("update-check.latest"));
+                } else {
+                    getLogger().info(Locale.getMessage("update-check.outdate"));
+                }
+            });
+        }
 
         getLogger().info("Plugin " + getConfig().getString("Version") + " loaded!");
     }
