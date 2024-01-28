@@ -1,0 +1,76 @@
+# from HIGH to LOW
+# 优先级由高至低
+priority:
+  - group1
+  - default
+
+# If %player_name% isn't work, try to use %player%
+
+groups:
+  # DO NOT ADD THIS TO THE PRIORITY LIST
+  # 不要将此组加入列表
+  # THIS IS USED FOR NEW PLAYER JOINING
+  # 这是新玩家加入后会用到的
+  # DO NOT DELETE IT.
+  # 不要删除
+  newbie:
+    enable: true
+    join:
+      message:
+        - '&dNew player %player% has joined the server!'
+    action:
+      1:
+        type: command
+        command: 'minecraft:give %player% diamond 24'
+      2:
+        type: message
+        message: '&dWelcome to the server!'
+  # group name
+  default:
+    # Set join message here
+    join:
+      # enable or disable the default joining message
+      default: true
+      message:
+        - '&7[&a+&7] &e%player_name%'
+    # Set quit message here
+    quit:
+      # enable or disable the default quiting message
+      default: true
+      message:
+        - '&7[&c-&7] &e%player_name%'
+    # The commands executed when the player joined
+    # There are 3 types of action: command, message, sound
+    # In the part of message, it depends PlaceholderAPI so you can use it's placeholders like %player_name% or %player_health%
+    # In the other part, %player% is fine.
+    action:
+      1:
+        type: command
+        command: 'minecraft:give %player% grass_block 1'
+      2:
+        type: message
+        message: '&aWelcome back! Your name is %player_name%'
+  # You can create other group here. Remember to put the custom group into priority list.
+  group1:
+    join:
+      default: false
+      message:
+        - '&7&m                           '
+        - '&aPro player &e%player% &ajoined the server!'
+        - '&7&m                           '
+    quit:
+      default: false
+      message:
+        - '&7&m                           '
+        - '&aPro player &e%player% &aleft the server!'
+        - '&7&m                           '
+    action:
+      1:
+        type: command
+        command: 'minecraft:give %player% diamond 1'
+      2:
+        type: message
+        message: '&aWelcome back! Your name is %player_name%'
+      3:
+        type: sound
+        sound: ENTITY_FIREWORK_ROCKET_LAUNCH

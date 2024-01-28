@@ -1,0 +1,12 @@
+name: HolyJoin
+main: p1xel.holyjoin.HolyJoin
+version: 1.0.1
+api-version: 1.13
+depend: [PlaceholderAPI]
+commands:
+  holyjoin:
+    aliases: [hj]
+permissions:
+  holyjoin.default:
+    default: true
+    description: 'Default group for player'

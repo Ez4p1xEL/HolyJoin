@@ -1,0 +1,19 @@
+Language: zh_CN
+Prefix: HolyJoin
+commands:
+  top: '&8&m                                                   '
+  plugin: '                &b&l%prefix% %version%'
+  space-1: '&f'
+  help: '&7/%prefix% help &6查看帮助'
+  reload: '&7/%prefix% reload &6重载配置文件'
+  space-2: '&f'
+  bottom: '&8&m                                                   '
+
+reload-success: '&7[&b%prefix%&7] &a配置文件重载成功!'
+
+no-perm: '&7[&b%prefix%&7] &c你没有权限!'
+
+update-check:
+  invalid: '无法检查更新: '
+  latest: '没有可用的更新'
+  outdate: '有可用的更新'
